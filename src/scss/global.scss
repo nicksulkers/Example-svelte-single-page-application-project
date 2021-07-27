@@ -1,0 +1,9 @@
+@import "colors";
+@import "reset";
+
+:root {
+	@each $color, $value in $colors {
+		--text-color-#{$color}: #{map-get($value, text)};
+		--background-color-#{$color}: #{map-get($value, background)};
+	}
+}
